@@ -1,0 +1,42 @@
+{
+  "title": "Module",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "http://powerd6.org/schemas/module.json",
+  "type": "object",
+  "required": ["id", "name", "description", "authors", "models"],
+  "properties": {
+    "id": {
+      "type": "string"
+    },
+    "name": {
+      "type": "string"
+    },
+    "description": {
+      "$ref": "https://powerd6.org/schemas/markdown-string"
+    },
+    "authors": {
+      "type": "array",
+      "items": {
+        "$ref": "https://powerd6.org/schemas/author"
+      }
+    },
+    "models": {
+      "type": "object",
+      "properties": {
+        "^.$": { "type": "string" }
+      }
+    },
+    "content": {
+      "type": "object",
+      "properties": {
+        "^.$": {
+          "type": "array",
+          "items": {
+            "type": "object"
+          }
+        }
+      }
+    }
+  },
+  "additionalProperties": false
+}
