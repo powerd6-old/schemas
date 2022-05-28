@@ -21,7 +21,7 @@ The value inside `[]` is a JSON-path expression that instructs which objects fro
 
 An expression `{.name}[$.content.currency[?(@.id=='gol')]]` will show the `name` property of the object located at `$.content.currency[?(@.id=='gol')`.
 
-In the example shown in [the module documentation](./module.md), this object would be:
+In the example shown in [the module documentation](module.md), this object would be:
 
 ```json
 {
