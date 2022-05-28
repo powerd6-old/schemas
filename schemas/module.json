@@ -1,7 +1,7 @@
 {
   "title": "Module",
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "http://powerd6.org/schemas/module.json",
+  "$id": "http://schemas.powerd6.org/schemas/module.json",
   "type": "object",
   "required": ["id", "name", "description", "authors", "models"],
   "properties": {
@@ -12,12 +12,12 @@
       "type": "string"
     },
     "description": {
-      "$ref": "https://powerd6.org/schemas/markdown-string"
+      "$ref": "https://schemas.powerd6.org/markdown-string.json"
     },
     "authors": {
       "type": "array",
       "items": {
-        "$ref": "https://powerd6.org/schemas/author"
+        "$ref": "https://schemas.powerd6.org/author.json"
       }
     },
     "models": {
