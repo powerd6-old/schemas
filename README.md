@@ -2,4 +2,6 @@
 
 Schemas used by the powerd6 roleplaying system
 
-Documentation for each schema is available under the [`docs`](docs/index.md) folder.
+Schemas are store under the [`schemas`](schemas/) folder.
+
+Documentation for each schema is available under the [`docs`](docs/) folder.
