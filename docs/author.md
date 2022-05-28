@@ -16,6 +16,6 @@ The human readable name
 
 ## `biography` (optional)
 
-Type: [markdown-string](./markdown-string.md)
+Type: [markdown-string](markdown-string.md)
 
 A short biography for the author

@@ -16,13 +16,13 @@ The human readable name
 
 ## `description`
 
-Type: [markdown-string](./markdown-string.md)
+Type: [markdown-string](markdown-string.md)
 
 A description of the module and what it provides
 
 ## `author`
 
-Type: array([author](./author.md))
+Type: array([author](author.md))
 
 The list of authors of the module
 
