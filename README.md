@@ -1,3 +1,3 @@
-# elements
+# schemas
 
-Elements of the powerd6 roleplaying system
+Schemas used by the powerd6 roleplaying system
