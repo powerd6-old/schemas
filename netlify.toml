@@ -3,6 +3,6 @@
 
 
 [[headers]]
-  for = "/schema/*.json"
+  for = "/schemas/*.json"
   [headers.values]
     content-type = "application/schema+json"
