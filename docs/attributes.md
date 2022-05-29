@@ -30,6 +30,6 @@ The description of the attribute and what it encompasses.
 
 ## `focuses`
 
-Type: array([focus](focus.md))
+Type: array([reference](reference.md))
 
-An array of exactly two focuses that relate to the attribute.
+An array of exactly two references to the [focuses](focus.md) that relate to the attribute.

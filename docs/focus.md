@@ -21,3 +21,9 @@ The human readable name
 Type: [markdown-string](markdown-string.md)
 
 The description of the focus and what it encompasses
+
+## `attribute`
+
+Type: [reference](reference.md)
+
+A references to the [attribute](attribute.md) that relate to the focus.

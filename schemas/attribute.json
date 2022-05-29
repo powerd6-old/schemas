@@ -24,7 +24,7 @@
       "minItems": 2,
       "maxItems": 2,
       "items": {
-        "$ref": "https://schemas.powerd6.org/schemas/focus.json"
+        "$ref": "https://schemas.powerd6.org/schemas/reference.json"
       }
     }
   },
