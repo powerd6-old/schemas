@@ -8,19 +8,19 @@ A focus contains the following properties:
 
 Type: string
 
-A unique identifier
+A unique identifier.
 
 ## `name`
 
 Type: string
 
-The human readable name
+The human readable name.
 
 ## `description`
 
 Type: [markdown-string](markdown-string.md)
 
-The description of the focus and what it encompasses
+The description of the focus and what it encompasses.
 
 ## `attribute`
 

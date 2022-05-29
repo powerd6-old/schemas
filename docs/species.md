@@ -8,13 +8,13 @@ A species contains the following properties:
 
 Type: string
 
-A unique identifier
+A unique identifier.
 
 ## `name`
 
 Type: string
 
-The human readable name
+The human readable name.
 
 ## `description`
 
