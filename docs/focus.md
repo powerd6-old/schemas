@@ -20,4 +20,4 @@ The human readable name
 
 Type: [markdown-string](markdown-string.md)
 
-The description of the focus and what it encompasses.
+The description of the focus and what it encompasses

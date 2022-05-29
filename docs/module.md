@@ -8,25 +8,25 @@ A Module contains the following properties:
 
 Type: string
 
-A unique identifier
+A unique identifier.
 
 ## `name`
 
 Type: string
 
-The human readable name
+The human readable name.
 
 ## `description`
 
 Type: [markdown-string](markdown-string.md)
 
-A description of the module and what it provides
+A description of the module and what it provides.
 
 ## `author`
 
 Type: array([author](author.md))
 
-The list of authors of the module
+The list of authors of the module.
 
 ## `models`
 

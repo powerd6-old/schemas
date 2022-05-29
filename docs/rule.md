@@ -8,16 +8,16 @@ A rule contains the following properties:
 
 Type: string
 
-A unique identifier
+A unique identifier.
 
 ## `name`
 
 Type: string
 
-The human readable name
+The human readable name.
 
 ## `description`
 
 Type: [markdown-string](markdown-string.md)
 
-The rule's description
+The rule's description.
