@@ -1,0 +1,32 @@
+{
+  "title": "Attribute",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.powerd6.org/schemas/attribute.json",
+  "type": "object",
+  "required": ["id", "name", "abbreviation", "description", "focuses"],
+  "properties": {
+    "id": {
+      "type": "string"
+    },
+    "name": {
+      "type": "string"
+    },
+    "abbreviation": {
+      "type": "string",
+      "minLength": 3,
+      "maxLength": 3
+    },
+    "description": {
+      "$ref": "https://schemas.powerd6.org/schemas/markdown-string.json"
+    },
+    "focuses": {
+      "type": "array",
+      "minItems": 2,
+      "maxItems": 2,
+      "items": {
+        "$ref": "https://schemas.powerd6.org/schemas/focus.json"
+      }
+    }
+  },
+  "additionalProperties": false
+}
