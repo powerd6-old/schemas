@@ -2,7 +2,7 @@
 
 Schema: https://schemas.powerd6.org/schemas/item.json
 
-An effect contains the following properties:
+An item contains the following properties:
 
 ## `id`
 
@@ -20,7 +20,7 @@ The human readable name
 
 Type: [markdown-string](markdown-string.md)
 
-The description of the effect and what it causes.
+The description of the item is and how it looks.
 
 ## `effects` (optional)
 
