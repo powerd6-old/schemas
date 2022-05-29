@@ -13,6 +13,7 @@
 * [Focus](focus.md)
 * [Module](module.md)
 * [Rule](rule.md)
+* [Spell](spell.md)
 
 ---
 

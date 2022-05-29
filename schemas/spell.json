@@ -1,0 +1,31 @@
+{
+  "title": "Spell",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.powerd6.org/schemas/spell.json",
+  "type": "object",
+  "required": ["id", "name", "description", "effects", "learning_requirements"],
+  "properties": {
+    "id": {
+      "type": "string"
+    },
+    "name": {
+      "type": "string"
+    },
+    "description": {
+      "$ref": "https://schemas.powerd6.org/schemas/markdown-string.json"
+    },
+    "learning_requirements": {
+      "$ref": "https://schemas.powerd6.org/schemas/markdown-string.json"
+    },
+    "activation_requirements": {
+      "$ref": "https://schemas.powerd6.org/schemas/markdown-string.json"
+    },
+    "effects": {
+      "type": "array",
+      "items": {
+        "$ref": "https://schemas.powerd6.org/schemas/effect.json"
+      }
+    }
+  },
+  "additionalProperties": false
+}
