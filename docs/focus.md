@@ -24,6 +24,6 @@ The description of the focus and what it encompasses.
 
 ## `attribute`
 
-Type: [reference](reference.md)
+Type: string
 
-A references to the [attribute](attribute.md) that relate to the focus.
+The [attribute](attribute.md) `id` that relate to this focus.

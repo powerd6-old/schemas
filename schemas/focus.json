@@ -15,8 +15,8 @@
       "$ref": "https://schemas.powerd6.org/schemas/markdown-string.json"
     },
     "attribute": {
-      "$ref": "https://schemas.powerd6.org/schemas/reference.json",
-      "$comment": "A reference to the parent attribute"
+      "type": "string",
+      "$comment": "A reference to an attribute"
     }
   },
   "additionalProperties": false

@@ -24,8 +24,13 @@
       "minItems": 2,
       "maxItems": 2,
       "items": {
-        "$ref": "https://schemas.powerd6.org/schemas/reference.json",
-        "$comment": "The related focuses"
+        "type": "object",
+        "properties": {
+          "focus_id": {
+            "type": "string",
+            "$comment": "A reference to a focus"
+          }
+        }
       }
     }
   },
