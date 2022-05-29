@@ -1,5 +1,7 @@
 # Module
 
+Schema: https://schemas.powerd6.org/schemas/module.json
+
 A Module contains the following properties:
 
 ## `id`

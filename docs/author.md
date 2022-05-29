@@ -1,5 +1,7 @@
 # Author
 
+Schema: https://schemas.powerd6.org/schemas/author.json
+
 An author contains the following properties:
 
 ## `id`
