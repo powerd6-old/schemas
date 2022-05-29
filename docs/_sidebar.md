@@ -6,7 +6,7 @@
 
 # Schemas
 
-* [Attributes](attributes.md)
+* [Attributes](attribute.md)
 * [Author](author.md)
 * [Effect](effect.md)
 * [Item](item.md)
