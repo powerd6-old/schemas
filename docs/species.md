@@ -24,6 +24,8 @@ The description of the species.
 
 ## `effects` (optional)
 
-Type: array([effect](effect.md))
+Type: array([reference](reference.md))
 
 A list of effects that this species can provide.
+
+The `type` field should be `effect`.
