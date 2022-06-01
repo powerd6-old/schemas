@@ -4,7 +4,7 @@ Schema: https://schemas.powerd6.org/schemas/reference.json
 
 A reference to content contained elsewhere.
 
-## `type`
+## `model`
 
 Type: string
 

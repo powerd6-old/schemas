@@ -3,9 +3,9 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "https://schemas.powerd6.org/schemas/reference.json",
   "type": "object",
-  "required": ["id", "name", "description"],
+  "required": ["model", "id"],
   "properties": {
-    "type": {
+    "model": {
       "type": "string"
     },
     "id": {
