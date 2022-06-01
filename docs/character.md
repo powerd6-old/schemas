@@ -52,51 +52,41 @@ The backstory of the character.
 
 ## `species`
 
-Type: string
+Type: [reference](reference.md)
 
-The [species](species.md) `id` for this character.
+The [species](species.md) for this character.
+
+The `model` field should be `species`.
 
 ## `attribute_values`
 
-Type: array(object)
+Type: array([reference](reference.md))
 
 A list of attributes and their values.
 
-### `attribute_values[].attribute_id`
-
-Type: string
-
-The [attribute](attribute.md) `id` in question.
+The `model` field should be `effect`.
 
 ### `attribute_values[].value`
 
 Type: integer
 
-The value for the attribute.
+The value for the attribute. This value must be between `-3` and `5`.
 
 ## `acquired_focuses`
 
-Type: array(object)
+Type: array([reference](reference.md))
 
 A list of the focuses the character has acquired.
 
-### `acquired_focuses[].focus_id`
-
-Type: string
-
-The [focus](focus.md) `id` in question.
+The `model` field should be `focus`.
 
 ## `health_capacity`
 
-Type: array(object)
+Type: array([reference](reference.md))
 
-A list of [injuries](injuries.md) with the number of injuries of that type that the character can have.
+A list of [injuries](injury.md) with the number of injuries of that type that the character can have.
 
-### `health_capacity[].injury_id`
-
-Type: string
-
-The [injury](injury.md) `id` in question.
+The `model` field should be `injury`.
 
 ### `health_capacity[].count`
 
@@ -106,15 +96,11 @@ The amount of the injury type in question that the character can have.
 
 ## `inventory`
 
-Type: array(object)
+Type: array([reference](reference.md))
 
 A list of [items](item.md) that the character owns.
 
-### `inventory[].item_id`
-
-Type: string
-
-The [item](item.md) `id` in question.
+The `model` field should be `item`.
 
 ### `inventory[].amount`
 
@@ -124,27 +110,19 @@ The amount of the item that the character can have.
 
 ## `known_spells`
 
-Type: array(object)
+Type: array([reference](reference.md))
 
 A list of [spells](spell.md) that the character knows.
 
-### `known_spells[].spell_id`
-
-Type: string
-
-The [spell](spell.md) `id` in question.
+The `model` field should be `spell`.
 
 ## `effects`
 
-Type: array(object)
+Type: array([reference](reference.md))
 
 A list of [effects](effect.md) that the character has affecting them.
 
-### `effects[].effect_id`
-
-Type: string
-
-The [effect](effect.md) `id` in question.
+The `model` field should be `effect`.
 
 # Character sample
 
@@ -158,77 +136,96 @@ The [effect](effect.md) `id` in question.
   },
   "description": "",
   "backstory": "",
-  "species": "naga",
+  "species": {
+    "type": "species",
+    "id": "naga"
+  },
   "attribute_values": [
     {
-      "attribute_id": "perception",
+      "type": "attribute",
+      "id": "perception",
       "value": 2
     },
     {
-      "attribute_id": "strength",
+      "type": "attribute",
+      "id": "strength",
       "value": 1
     },
     // {
-    //   "attribute_id": "charisma",
+    //   "type":"attribute",
+    //   "id": "charisma",
     //   "value": 0
     // },
     // Can be omitted to represent 0
     {
-      "attribute_id": "agility",
+      "type": "attribute",
+      "id": "agility",
       "value": 3
     },
     {
-      "attribute_id": "wisdom",
+      "type": "attribute",
+      "id": "wisdom",
       "value": -1
     },
     {
-      "attribute_id": "dexterity",
+      "type": "attribute",
+      "id": "dexterity",
       "value": -2
     }
   ],
   "acquired_focuses": [
     {
-      "focus_id": "awareness"
+      "type": "focus",
+      "id": "awareness"
     },
     {
-      "focus_id": "speed"
+      "type": "focus",
+      "id": "speed"
     }
   ],
   "health_capacity": [
     {
-      "injury_id": "light",
+      "type": "injury",
+      "id": "light",
       "count": 4
     },
     {
-      "injury_id": "medium",
+      "type": "injury",
+      "id": "medium",
       "count": 3
     },
     {
-      "injury_id": "harsh",
+      "type": "injury",
+      "id": "harsh",
       "count": 1
     }
   ],
   "inventory": [
     {
-      "item_id": "sword",
+      "type": "item",
+      "id": "sword",
       "amount": 1
     },
     {
-      "item_id": "health_potion",
+      "type": "item",
+      "id": "health_potion",
       "amount": 10
     }
   ],
   "known_spells": [
     {
-      "spell_id": "flash"
+      "type": "spell",
+      "id": "flash"
     },
     {
-      "spell_id": "smoke_screen"
+      "type": "spell",
+      "id": "smoke_screen"
     }
   ],
   "effects": [
     {
-      "effect_id": "blessing_verot"
+      "type": "effect",
+      "id": "blessing_verot"
     }
   ]
 }

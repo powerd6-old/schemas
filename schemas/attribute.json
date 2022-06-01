@@ -24,12 +24,11 @@
       "minItems": 2,
       "maxItems": 2,
       "items": {
-        "type": "object",
+        "allOf": [
+          { "$ref": "https://schemas.powerd6.org/schemas/reference.json" }
+        ],
         "properties": {
-          "focus_id": {
-            "type": "string",
-            "$comment": "A reference to a focus"
-          }
+          "model": { "const": "focus" }
         }
       }
     }

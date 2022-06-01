@@ -24,6 +24,8 @@ The description of the item is and how it looks.
 
 ## `effects` (optional)
 
-Type: array([effect](effect.md))
+Type: array([reference](reference.md))
 
 A list of effects that this item can provide.
+
+The `model` field should be `effect`.

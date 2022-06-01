@@ -15,7 +15,12 @@
       "$ref": "https://schemas.powerd6.org/schemas/markdown-string.json"
     },
     "attribute": {
-      "type": "string",
+      "allOf": [
+        { "$ref": "https://schemas.powerd6.org/schemas/reference.json" }
+      ],
+      "properties": {
+        "model": { "const": "attribute" }
+      },
       "$comment": "A reference to an attribute"
     }
   },

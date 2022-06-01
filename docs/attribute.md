@@ -30,12 +30,8 @@ The description of the attribute and what it encompasses.
 
 ## `focuses`
 
-Type: array(object)
+Type: array([reference](reference.md))
 
 An array of exactly two references to the [focuses](focus.md) that relate to the attribute.
 
-### `focuses[].focus_id`
-
-Type: string
-
-The [focus](focus.md) `id` in question.
+The `model` field should be `effect`.

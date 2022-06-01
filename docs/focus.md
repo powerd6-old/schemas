@@ -24,6 +24,8 @@ The description of the focus and what it encompasses.
 
 ## `attribute`
 
-Type: string
+Type: [reference](reference.md)
 
-The [attribute](attribute.md) `id` that relate to this focus.
+The [attribute](attribute.md) that relate to this focus.
+
+The `model` field should be `attribute`.

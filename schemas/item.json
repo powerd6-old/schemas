@@ -17,7 +17,12 @@
     "effects": {
       "type": "array",
       "items": {
-        "$ref": "https://schemas.powerd6.org/schemas/effect.json"
+        "allOf": [
+          { "$ref": "https://schemas.powerd6.org/schemas/reference.json" }
+        ],
+        "properties": {
+          "model": { "const": "effect" }
+        }
       }
     }
   },

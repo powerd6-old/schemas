@@ -37,18 +37,22 @@
       "$ref": "https://schemas.powerd6.org/schemas/markdown-string.json"
     },
     "species": {
-      "type": "string",
+      "allOf": [
+        { "$ref": "https://schemas.powerd6.org/schemas/reference.json" }
+      ],
+      "properties": {
+        "model": { "const": "species" }
+      },
       "$comment": "A reference to a species"
     },
     "attribute_values": {
       "type": "array",
       "items": {
-        "type": "object",
+        "allOf": [
+          { "$ref": "https://schemas.powerd6.org/schemas/reference.json" }
+        ],
         "properties": {
-          "attribute_id": {
-            "type": "string",
-            "$comment": "A reference to an attribute"
-          },
+          "model": { "const": "attribute" },
           "value": {
             "type": "integer",
             "minimum": -3,
@@ -60,24 +64,22 @@
     "acquired_focuses": {
       "type": "array",
       "items": {
-        "type": "object",
+        "allOf": [
+          { "$ref": "https://schemas.powerd6.org/schemas/reference.json" }
+        ],
         "properties": {
-          "focus_id": {
-            "type": "string",
-            "$comment": "A reference to a focus"
-          }
+          "model": { "const": "focus" }
         }
       }
     },
     "health_capacity": {
       "type": "array",
       "items": {
-        "type": "object",
+        "allOf": [
+          { "$ref": "https://schemas.powerd6.org/schemas/reference.json" }
+        ],
         "properties": {
-          "injury_id": {
-            "type": "string",
-            "$comment": "A reference to an injury"
-          },
+          "model": { "const": "injury" },
           "count": { "type": "number", "minimum": 0 }
         }
       }
@@ -85,12 +87,11 @@
     "inventory": {
       "type": "array",
       "items": {
-        "type": "object",
+        "allOf": [
+          { "$ref": "https://schemas.powerd6.org/schemas/reference.json" }
+        ],
         "properties": {
-          "item_id": {
-            "type": "string",
-            "$comment": "A reference to an item"
-          },
+          "model": { "const": "item" },
           "amount": { "type": "number", "minimum": 0 }
         }
       }
@@ -98,24 +99,22 @@
     "known_spells": {
       "type": "array",
       "items": {
-        "type": "object",
+        "allOf": [
+          { "$ref": "https://schemas.powerd6.org/schemas/reference.json" }
+        ],
         "properties": {
-          "spell_id": {
-            "type": "string",
-            "$comment": "A reference to a spell"
-          }
+          "model": { "const": "spell" }
         }
       }
     },
     "effects": {
       "type": "array",
       "items": {
-        "type": "object",
+        "allOf": [
+          { "$ref": "https://schemas.powerd6.org/schemas/reference.json" }
+        ],
         "properties": {
-          "effect_id": {
-            "type": "string",
-            "$comment": "A reference to an effect"
-          }
+          "model": { "const": "effect" }
         }
       }
     }
