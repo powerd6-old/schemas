@@ -1,0 +1,28 @@
+{
+  "title": "Focus",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.powerd6.org/schemas/focus.json",
+  "type": "object",
+  "required": ["id", "name", "description", "attribute"],
+  "properties": {
+    "id": {
+      "type": "string"
+    },
+    "name": {
+      "type": "string"
+    },
+    "description": {
+      "$ref": "https://schemas.powerd6.org/schemas/markdown-string.json"
+    },
+    "attribute": {
+      "allOf": [
+        { "$ref": "https://schemas.powerd6.org/schemas/reference.json" }
+      ],
+      "properties": {
+        "model": { "const": "attribute" }
+      },
+      "$comment": "A reference to an attribute"
+    }
+  },
+  "additionalProperties": false
+}

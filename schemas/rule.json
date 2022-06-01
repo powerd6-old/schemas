@@ -1,9 +1,9 @@
 {
-  "title": "Author",
+  "title": "Rule",
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://schemas.powerd6.org/schemas/author.json",
+  "$id": "https://schemas.powerd6.org/schemas/rule.json",
   "type": "object",
-  "required": ["id", "name"],
+  "required": ["id", "name", "description"],
   "properties": {
     "id": {
       "type": "string"
@@ -11,7 +11,7 @@
     "name": {
       "type": "string"
     },
-    "biography": {
+    "description": {
       "$ref": "https://schemas.powerd6.org/schemas/markdown-string.json"
     }
   },

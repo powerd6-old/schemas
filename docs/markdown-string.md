@@ -1,5 +1,7 @@
 # Markdown string
 
+Schema: https://schemas.powerd6.org/schemas/markdown-string.json
+
 Markdown string is a string meant to be parsed by a markdown interpreter.
 
 ## Extensions

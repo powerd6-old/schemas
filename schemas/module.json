@@ -1,7 +1,7 @@
 {
   "title": "Module",
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "http://schemas.powerd6.org/schemas/module.json",
+  "$id": "https://schemas.powerd6.org/schemas/module.json",
   "type": "object",
   "required": ["id", "name", "description", "authors", "models"],
   "properties": {
@@ -12,18 +12,20 @@
       "type": "string"
     },
     "description": {
-      "$ref": "https://schemas.powerd6.org/markdown-string.json"
+      "$ref": "https://schemas.powerd6.org/schemas/markdown-string.json"
     },
     "authors": {
       "type": "array",
       "items": {
-        "$ref": "https://schemas.powerd6.org/author.json"
+        "$ref": "https://schemas.powerd6.org/schemas/author.json"
       }
     },
     "models": {
       "type": "object",
       "properties": {
-        "^.$": { "type": "string" }
+        "^.$": {
+          "type": "string"
+        }
       }
     },
     "content": {
