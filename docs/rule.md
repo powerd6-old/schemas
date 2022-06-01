@@ -24,10 +24,4 @@ The rule's description.
 
 # Sample
 
-```json
-{
-  "id": "dice-roll-advantage",
-  "name": "Advantages",
-  "description": "If something or someone is assisting the player in the action, or the action relates to a focus which the character has, roll with advantage.\nRolling with advantage means you will roll two dice, then choose the one that is most favourable to you."
-}
-```
+[rule.json](examples/rule.json ':include :type=code')

@@ -38,21 +38,4 @@ The `model` field should be `effect`.
 
 # Sample
 
-```json
-{
-  "id": "strength",
-  "name": "Strength",
-  "abbreviation": "STR",
-  "description": "Strength is related to the physical quality of a character's body.",
-  "focuses": [
-    {
-      "model": "focus",
-      "id": "power"
-    },
-    {
-      "model": "focus",
-      "id": "endurance"
-    }
-  ]
-}
-```
+[attribute.json](examples/attribute.json ':include :type=code')

@@ -18,9 +18,4 @@ The unique id of the referenced content. Normally matching the content's own `id
 
 # Sample
 
-```json
-{
-  "type": "effect",
-  "id": "inflict-injury"
-}
-```
+[reference.json](examples/reference.json ':include :type=code')

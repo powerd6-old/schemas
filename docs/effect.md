@@ -24,10 +24,4 @@ The description of the effect and what it causes.
 
 # Sample
 
-```json
-{
-  "id": "blessing_verot",
-  "name": "Blessing of Verot",
-  "description": "Advantage in {.wisdom}[attribute.wisdom] tests"
-}
-```
+[effect.json](examples/effect.json ':include :type=code')

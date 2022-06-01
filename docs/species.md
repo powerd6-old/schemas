@@ -32,16 +32,4 @@ The `model` field should be `effect`.
 
 # Sample
 
-```json
-{
-  "id": "naga",
-  "name": "Naga",
-  "description": "The Naga are half-human, half-snake beings. They have snake-like tails in place of legs, as well as scaled skin on their forearms and backs.",
-  "effects": [
-    {
-      "type": "effect",
-      "id": "dark-vision"
-    }
-  ]
-}
-```
+[species.json](examples/species.json ':include :type=code')

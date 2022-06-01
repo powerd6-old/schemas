@@ -54,44 +54,6 @@ Type: object
 
 Each object in the value array is an object that follows the schema identified by the key.
 
-
 # Sample
 
-```json
-{
-  "id": "sample-module",
-  "name": "Sample Module",
-  "description": "A sample module that showcases how modules should be structured",
-  "models": {
-    "item": "/schema/item",
-    "currency": "/schema/currency",
-    "gods": "https://example.com/schemas/gods"
-  },
-  "content": {
-    "item": [
-      {
-        "id": "sword",
-        "name": "Sword",
-        "description": "This is a big blade",
-        "cost": [
-          "10 {.name}[$.content.currency[?(@.id=='gol')]]"
-        ]
-      }
-    ],
-    "currency": [
-      {
-        "id": "gol",
-        "name": "Gol",
-        "description": "A small circular coin. The most commonly used currency."
-      }
-    ],
-    "gods": [
-      {
-        "id": "verot",
-        "name": "Verot, the sage",
-        "description": "Verot is the timeworn god of knowledge and wisdom."
-      }
-    ]
-  }
-}
-```
+[module.json](examples/module.json ':include :type=code')

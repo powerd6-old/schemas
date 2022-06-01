@@ -24,11 +24,4 @@ A short biography for the author.
 
 # Sample
 
-```json
-{
-  "id": "john-doe",
-  "name": "John Doe",
-  "biography": "John is a great person."
-}
-
-```
+[author.json](examples/author.json ':include :type=code')
