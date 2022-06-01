@@ -40,4 +40,4 @@ Type: array([reference](reference.md))
 
 A list of effects that this spell causes when activate.
 
-The `type` field should be `effect`.
+The `model` field should be `effect`.

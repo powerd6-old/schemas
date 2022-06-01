@@ -27,7 +27,7 @@
           { "$ref": "https://schemas.powerd6.org/schemas/reference.json" }
         ],
         "properties": {
-          "type": { "const": "effect" }
+          "model": { "const": "effect" }
         }
       }
     }

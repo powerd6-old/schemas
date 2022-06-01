@@ -28,4 +28,4 @@ Type: array([reference](reference.md))
 
 A list of effects that this species can provide.
 
-The `type` field should be `effect`.
+The `model` field should be `effect`.
