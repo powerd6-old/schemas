@@ -11,9 +11,12 @@
 * [Item](item.md)
 * [Focus](focus.md)
 * [Item](item.md)
-* [Markdown String](markdown-string.md)
 * [Module](module.md)
-* [Reference](reference.md)
 * [Rule](rule.md)
 * [Species](species.md)
 * [Spell](spell.md)
+
+---
+
+* [Markdown String](markdown-string.md)
+* [Reference](reference.md)
