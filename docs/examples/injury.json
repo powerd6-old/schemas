@@ -1,0 +1,11 @@
+{
+  "id": "harsh",
+  "name": "Harsh",
+  "description": "Harsh injuries are life-changing events that may change how your character is forever. While they eventually heal and you adapt, you are not quite the same anymore.",
+  "effects": [
+    {
+      "type": "effect",
+      "id": "disadvantage-movement"
+    }
+  ]
+}

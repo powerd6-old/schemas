@@ -10,6 +10,7 @@
 * [Effect](effect.md)
 * [Item](item.md)
 * [Focus](focus.md)
+* [Injury](injury.md)
 * [Item](item.md)
 * [Module](module.md)
 * [Rule](rule.md)
