@@ -8,7 +8,6 @@
 * [Author](author.md)
 * [Character](character.md)
 * [Effect](effect.md)
-* [Item](item.md)
 * [Focus](focus.md)
 * [Injury](injury.md)
 * [Item](item.md)

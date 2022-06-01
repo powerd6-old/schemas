@@ -72,6 +72,12 @@ Type: integer
 
 The value for the attribute. This value must be between `-3` and `5`.
 
+### `attribute_values[].is_primary`
+
+Type: boolean
+
+A flag to show if an attribute is primary or not.
+
 ## `acquired_focuses`
 
 Type: array([reference](reference.md))

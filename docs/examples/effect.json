@@ -1,5 +1,5 @@
 {
   "id": "blessing_verot",
   "name": "Blessing of Verot",
-  "description": "Advantage in {.wisdom}[attribute.wisdom] tests"
+  "description": "Advantage in {.name}[$.content.attribute[?(@.id=='wisdom')]] tests"
 }
