@@ -55,7 +55,7 @@ Type: object
 Each object in the value array is an object that follows the schema identified by the key.
 
 
-# Module sample
+# Sample
 
 ```json
 {

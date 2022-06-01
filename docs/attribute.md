@@ -35,3 +35,24 @@ Type: array([reference](reference.md))
 An array of exactly two references to the [focuses](focus.md) that relate to the attribute.
 
 The `model` field should be `effect`.
+
+# Sample
+
+```json
+{
+  "id": "strength",
+  "name": "Strength",
+  "abbreviation": "STR",
+  "description": "Strength is related to the physical quality of a character's body.",
+  "focuses": [
+    {
+      "model": "focus",
+      "id": "power"
+    },
+    {
+      "model": "focus",
+      "id": "endurance"
+    }
+  ]
+}
+```

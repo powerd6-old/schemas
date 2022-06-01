@@ -124,7 +124,7 @@ A list of [effects](effect.md) that the character has affecting them.
 
 The `model` field should be `effect`.
 
-# Character sample
+# Sample
 
 ```json
 {

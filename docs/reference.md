@@ -15,3 +15,12 @@ The string name of the content type, as defined on the [module's](module.md) `mo
 Type: string
 
 The unique id of the referenced content. Normally matching the content's own `id` field.
+
+# Sample
+
+```json
+{
+  "type": "effect",
+  "id": "inflict-injury"
+}
+```

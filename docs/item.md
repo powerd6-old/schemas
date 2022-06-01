@@ -29,3 +29,19 @@ Type: array([reference](reference.md))
 A list of effects that this item can provide.
 
 The `model` field should be `effect`.
+
+# Sample
+
+```json
+{
+  "id": "sword",
+  "name": "Sword",
+  "description": "A very sharp blade.",
+  "effects": [
+    {
+      "type": "effect",
+      "id": "inflict-injury"
+    }
+  ]
+}
+```

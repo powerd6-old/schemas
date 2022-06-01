@@ -29,3 +29,17 @@ Type: [reference](reference.md)
 The [attribute](attribute.md) that relate to this focus.
 
 The `model` field should be `attribute`.
+
+# Sample
+
+```json
+{
+  "id": "power",
+  "name": "Power",
+  "description": "Power is all about force.\nHow much can they lift, how far they can throw and how much impulse they can put behind their movement are all related to power.",
+  "attribute": {
+    "type": "attribute",
+    "id": "strength"
+  }
+}
+```

@@ -21,3 +21,14 @@ The human readable name.
 Type: [markdown-string](markdown-string.md)
 
 A short biography for the author.
+
+# Sample
+
+```json
+{
+  "id": "john-doe",
+  "name": "John Doe",
+  "biography": "John is a great person."
+}
+
+```
