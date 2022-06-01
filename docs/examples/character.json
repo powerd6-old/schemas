@@ -31,7 +31,8 @@
     {
       "type": "attribute",
       "id": "agility",
-      "value": 3
+      "value": 3,
+      "is_primary": true
     },
     {
       "type": "attribute",

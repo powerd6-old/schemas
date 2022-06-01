@@ -57,6 +57,9 @@
             "type": "integer",
             "minimum": -3,
             "maximum": 5
+          },
+          "is_primary": {
+            "type": "boolean"
           }
         }
       }
