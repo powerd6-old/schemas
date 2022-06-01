@@ -36,6 +36,8 @@ The description of what conditions must be met so that the spell can be activate
 
 ## `effects`
 
-Type: array([effect](effect.md))
+Type: array([reference](reference.md))
 
 A list of effects that this spell causes when activate.
+
+The `type` field should be `effect`.

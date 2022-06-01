@@ -3,7 +3,7 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "https://schemas.powerd6.org/schemas/spell.json",
   "type": "object",
-  "required": ["id", "name", "description", "effects", "learning_requirements"],
+  "required": ["id", "name", "description", "learning_requirements", "effects"],
   "properties": {
     "id": {
       "type": "string"
@@ -23,7 +23,12 @@
     "effects": {
       "type": "array",
       "items": {
-        "$ref": "https://schemas.powerd6.org/schemas/effect.json"
+        "allOf": [
+          { "$ref": "https://schemas.powerd6.org/schemas/reference.json" }
+        ],
+        "properties": {
+          "type": { "const": "effect" }
+        }
       }
     }
   },
