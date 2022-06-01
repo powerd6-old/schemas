@@ -13,6 +13,7 @@
 * [Item](item.md)
 * [Markdown String](markdown-string.md)
 * [Module](module.md)
+* [Reference](reference.md)
 * [Rule](rule.md)
 * [Species](species.md)
 * [Spell](spell.md)
