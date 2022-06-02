@@ -10,18 +10,18 @@ There are some syntax extensions that are intended from the base markdown defini
 
 ### Referencing other content items
 
-You might have seen a structure that looks like a link, but has "weird" expressions on it instead of urls: `{.name}[$.content.currency[?(@.id=='gol')]]`.
+You might have seen a structure that looks like a link, but has "weird" expressions on it instead of urls: `[money]{$.content.currency[?(@.id=='gol')]}`.
 
 These are item references and they work by leveraging JSON-path syntax to dynamically reference other items.
 
-These expressions are delimited by `{}` and `[]`.
+These expressions are delimited by `[]` and `{}`.
 
-The values inside `{}` are what is an accessor for the object queried by the `[]` portion.
-The value inside `[]` is a JSON-path expression that instructs which objects from the module definition to reference to.
+The values inside `[]` are what is going to be displayed for that reference.
+The value inside `{}` is a JSON-path expression that instructs which objects from the module definition to reference to.
 
 **Example**:
 
-An expression `{.name}[$.content.currency[?(@.id=='gol')]]` will show the `name` property of the object located at `$.content.currency[?(@.id=='gol')`.
+An expression `[money]{$.content.currency[?(@.id=='gol')]}` will show a link with the text `money` that refers to the objectlocated at `$.content.currency[?(@.id=='gol')`.
 
 In the example shown in [the module documentation](module.md), this object would be:
 
@@ -33,6 +33,4 @@ In the example shown in [the module documentation](module.md), this object would
 }
 ```
 
-Therefore, the displayed property would be `"Gol"`.
-
-This results in html similar to `<a href="#currency-gol">Gol</a>`.
+Therefore, the results in html would be similar to `<a href="#currency-gol">money</a>`.
