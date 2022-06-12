@@ -16,6 +16,14 @@ Type: string
 
 The human readable name.
 
+## `associated_number`
+
+Type: number [1..6]
+
+The number on the dice associated with this attribute.
+
+Must be from 1 to 6.
+
 ## `abbreviation`
 
 Type: string
