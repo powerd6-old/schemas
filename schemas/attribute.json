@@ -3,7 +3,7 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "https://schemas.powerd6.org/schemas/attribute.json",
   "type": "object",
-  "required": ["id", "name", "abbreviation", "description", "focuses"],
+  "required": ["id", "name", "associated_number", "abbreviation", "description", "focuses"],
   "properties": {
     "id": {
       "type": "string"
