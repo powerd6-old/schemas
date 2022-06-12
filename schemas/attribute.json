@@ -11,6 +11,11 @@
     "name": {
       "type": "string"
     },
+    "associated_number": {
+      "type": "number",
+      "minimum": 1,
+      "maximum": 6
+    },
     "abbreviation": {
       "type": "string",
       "minLength": 3,
