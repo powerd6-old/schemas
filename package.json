@@ -2,6 +2,7 @@
   "name": "@powerd6/schemas",
   "version": "1.0.0",
   "description": "Schemas used by the powerd6 roleplaying system",
+  "main": "./build/index.js",
   "scripts": {
     "test": "jest --passWithNoTests",
     "build": "tsc -p .",
