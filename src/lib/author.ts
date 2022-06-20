@@ -1,7 +1,7 @@
-import { MarkdownString } from "./markdown-string"
+import {MarkdownString} from './markdown-string';
 
 export interface Author {
-  id: string
-  name: string
-  biography?: MarkdownString
+  id: string;
+  name: string;
+  biography?: MarkdownString;
 }
