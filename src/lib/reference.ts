@@ -1,4 +1,4 @@
 export interface Reference {
-  model: string
-  id: string
+  model: string;
+  id: string;
 }

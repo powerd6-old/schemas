@@ -1,7 +1,7 @@
-import { MarkdownString } from "./markdown-string"
+import {MarkdownString} from './markdown-string';
 
 export interface Rule {
-  id: string
-  name: string
-  description: MarkdownString
+  id: string;
+  name: string;
+  description: MarkdownString;
 }
