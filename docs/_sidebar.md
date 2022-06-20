@@ -4,7 +4,7 @@
 
 ---
 
-* [Attributes](attribute.md)
+* [Attribute](attribute.md)
 * [Author](author.md)
 * [Character](character.md)
 * [Effect](effect.md)
