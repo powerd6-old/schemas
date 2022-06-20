@@ -1,3 +1,4 @@
+import { MarkdownString } from "./markdown-string"
 import { Reference } from "./reference"
 
 export interface Injury {
