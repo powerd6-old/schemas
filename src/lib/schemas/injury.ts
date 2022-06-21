@@ -1,11 +1,9 @@
+import {ISchemaModel} from '../schema-model';
 import {IMarkdownString} from './markdown-string';
 import {IReference} from './reference';
 
-export interface IAttribute {
-  id: string;
+export interface IInjury extends ISchemaModel {
   name: string;
-  associated_number: number;
-  abbreviation: string;
   description: IMarkdownString;
-  focuses: [IReference, IReference];
+  effects?: IReference[];
 }

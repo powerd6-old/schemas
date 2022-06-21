@@ -1,8 +1,8 @@
+import {ISchemaModel} from '../schema-model';
 import {IMarkdownString} from './markdown-string';
 import {IReference} from './reference';
 
-export interface ICharacter {
-  id: string;
+export interface ICharacter extends ISchemaModel {
   name: string;
   character_points: {
     available?: number;

@@ -1,16 +1,19 @@
-import {IAttribute} from './lib/attribute';
-import {IAuthor} from './lib/author';
-import {ICharacter} from './lib/character';
-import {IEffect} from './lib/effect';
-import {IFocus} from './lib/focus';
-import {IInjury} from './lib/injury';
-import {IItem} from './lib/item';
-import {IMarkdownString} from './lib/markdown-string';
-import {IModule} from './lib/module';
-import {IReference} from './lib/reference';
-import {IRule} from './lib/rule';
-import {ISpecies} from './lib/species';
-import {ISpell} from './lib/spell';
+import {ISchemaModel} from './lib/schema-model';
+import {IAttribute} from './lib/schemas/attribute';
+import {IAuthor} from './lib/schemas/author';
+import {ICharacter} from './lib/schemas/character';
+import {IEffect} from './lib/schemas/effect';
+import {IFocus} from './lib/schemas/focus';
+import {IInjury} from './lib/schemas/injury';
+import {IItem} from './lib/schemas/item';
+import {IMarkdownString} from './lib/schemas/markdown-string';
+import {IModule} from './lib/schemas/module';
+import {IReference} from './lib/schemas/reference';
+import {IRule} from './lib/schemas/rule';
+import {ISpecies} from './lib/schemas/species';
+import {ISpell} from './lib/schemas/spell';
+
+export type SchemaModel = ISchemaModel;
 
 export type Attribute = IAttribute;
 export type Author = IAuthor;

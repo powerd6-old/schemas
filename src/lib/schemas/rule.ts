@@ -1,7 +1,7 @@
+import {ISchemaModel} from '../schema-model';
 import {IMarkdownString} from './markdown-string';
 
-export interface IEffect {
-  id: string;
+export interface IRule extends ISchemaModel {
   name: string;
   description: IMarkdownString;
 }

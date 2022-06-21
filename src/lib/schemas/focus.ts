@@ -1,9 +1,9 @@
+import {ISchemaModel} from '../schema-model';
 import {IMarkdownString} from './markdown-string';
 import {IReference} from './reference';
 
-export interface IItem {
-  id: string;
+export interface IFocus extends ISchemaModel {
   name: string;
   description: IMarkdownString;
-  effects?: IReference[];
+  attribute: IReference;
 }

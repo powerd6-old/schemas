@@ -1,8 +1,8 @@
+import {ISchemaModel} from '../schema-model';
 import {IAuthor} from './author';
 import {IMarkdownString} from './markdown-string';
 
-export interface IModule {
-  id: string;
+export interface IModule extends ISchemaModel {
   name: string;
   description: IMarkdownString;
   authors: IAuthor[];
