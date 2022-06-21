@@ -1,11 +1,11 @@
-import {MarkdownString} from './markdown-string';
-import {Reference} from './reference';
+import {IMarkdownString} from './markdown-string';
+import {IReference} from './reference';
 
-export interface Spell {
+export interface ISpell {
   id: string;
   name: string;
-  description: MarkdownString;
-  learning_requirements: MarkdownString;
-  activation_requirements?: MarkdownString;
-  effects: Reference[];
+  description: IMarkdownString;
+  learning_requirements: IMarkdownString;
+  activation_requirements?: IMarkdownString;
+  effects: IReference[];
 }

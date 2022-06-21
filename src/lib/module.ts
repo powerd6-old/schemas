@@ -1,11 +1,11 @@
-import {Author} from './author';
-import {MarkdownString} from './markdown-string';
+import {IAuthor} from './author';
+import {IMarkdownString} from './markdown-string';
 
-export interface Module {
+export interface IModule {
   id: string;
   name: string;
-  description: MarkdownString;
-  authors: Author[];
+  description: IMarkdownString;
+  authors: IAuthor[];
   models: {
     '^.$'?: string;
     [k: string]: unknown;

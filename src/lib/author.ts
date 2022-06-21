@@ -1,7 +1,7 @@
-import {MarkdownString} from './markdown-string';
+import {IMarkdownString} from './markdown-string';
 
-export interface Author {
+export interface IAuthor {
   id: string;
   name: string;
-  biography?: MarkdownString;
+  biography?: IMarkdownString;
 }

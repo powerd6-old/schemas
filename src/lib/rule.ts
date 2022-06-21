@@ -1,7 +1,7 @@
-import {MarkdownString} from './markdown-string';
+import {IMarkdownString} from './markdown-string';
 
-export interface Rule {
+export interface IRule {
   id: string;
   name: string;
-  description: MarkdownString;
+  description: IMarkdownString;
 }

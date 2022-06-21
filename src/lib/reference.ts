@@ -1,4 +1,4 @@
-export interface Reference {
+export interface IReference {
   model: string;
   id: string;
 }

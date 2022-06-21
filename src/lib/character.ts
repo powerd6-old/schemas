@@ -1,7 +1,7 @@
-import {MarkdownString} from './markdown-string';
-import {Reference} from './reference';
+import {IMarkdownString} from './markdown-string';
+import {IReference} from './reference';
 
-export interface Character {
+export interface ICharacter {
   id: string;
   name: string;
   character_points: {
@@ -9,13 +9,13 @@ export interface Character {
     total?: number;
     [k: string]: unknown;
   };
-  description: MarkdownString;
-  backstory?: MarkdownString;
-  species: Reference;
-  attribute_values: Reference[];
-  acquired_focuses: Reference[];
-  health_capacity: Reference[];
-  inventory: Reference[];
-  known_spells: Reference[];
-  effects: Reference[];
+  description: IMarkdownString;
+  backstory?: IMarkdownString;
+  species: IReference;
+  attribute_values: IReference[];
+  acquired_focuses: IReference[];
+  health_capacity: IReference[];
+  inventory: IReference[];
+  known_spells: IReference[];
+  effects: IReference[];
 }

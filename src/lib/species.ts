@@ -1,9 +1,9 @@
-import {MarkdownString} from './markdown-string';
-import {Reference} from './reference';
+import {IMarkdownString} from './markdown-string';
+import {IReference} from './reference';
 
-export interface Species {
+export interface ISpecies {
   id: string;
   name: string;
-  description: MarkdownString;
-  effects?: Reference[];
+  description: IMarkdownString;
+  effects?: IReference[];
 }

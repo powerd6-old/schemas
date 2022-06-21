@@ -1,7 +1,7 @@
-import {MarkdownString} from './markdown-string';
+import {IMarkdownString} from './markdown-string';
 
-export interface Effect {
+export interface IEffect {
   id: string;
   name: string;
-  description: MarkdownString;
+  description: IMarkdownString;
 }

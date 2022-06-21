@@ -1,11 +1,11 @@
-import {MarkdownString} from './markdown-string';
-import {Reference} from './reference';
+import {IMarkdownString} from './markdown-string';
+import {IReference} from './reference';
 
-export interface Attribute {
+export interface IAttribute {
   id: string;
   name: string;
   associated_number: number;
   abbreviation: string;
-  description: MarkdownString;
-  focuses: [Reference, Reference];
+  description: IMarkdownString;
+  focuses: [IReference, IReference];
 }

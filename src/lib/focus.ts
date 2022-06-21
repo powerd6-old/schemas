@@ -1,9 +1,9 @@
-import {MarkdownString} from './markdown-string';
-import {Reference} from './reference';
+import {IMarkdownString} from './markdown-string';
+import {IReference} from './reference';
 
-export interface Focus {
+export interface IFocus {
   id: string;
   name: string;
-  description: MarkdownString;
-  attribute: Reference;
+  description: IMarkdownString;
+  attribute: IReference;
 }
