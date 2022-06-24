@@ -15,6 +15,9 @@ import {ISpell} from './lib/schemas/spell';
 
 export type SchemaModel = ISchemaModel;
 
+export type Reference = IReference;
+export type MarkdownString = IMarkdownString;
+
 export type Attribute = IAttribute;
 export type Author = IAuthor;
 export type Character = ICharacter;
@@ -22,9 +25,7 @@ export type Effect = IEffect;
 export type Focus = IFocus;
 export type Injury = IInjury;
 export type Item = IItem;
-export type MarkdownString = IMarkdownString;
 export type Module = IModule;
-export type Reference = IReference;
 export type Rule = IRule;
 export type Species = ISpecies;
 export type Spell = ISpell;
