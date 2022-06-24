@@ -1,6 +1,6 @@
 {
   "name": "@powerd6/schemas",
-  "version": "1.0.1",
+  "version": "1.1.0",
   "description": "Schemas used by the powerd6 roleplaying system",
   "main": "./build/index.js",
   "scripts": {
@@ -36,6 +36,7 @@
     "@apidevtools/json-schema-ref-parser": "^9.0.9",
     "chalk": "^5.0.1",
     "commander": "^9.3.0",
-    "yaml": "^2.1.1"
+    "yaml": "^2.1.1",
+    "zod": "^3.17.3"
   }
 }
