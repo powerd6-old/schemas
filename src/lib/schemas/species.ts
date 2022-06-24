@@ -1,9 +1,18 @@
-import {ISchemaModel} from '../schema-model';
-import {IMarkdownString} from './markdown-string';
-import {IReference} from './reference';
+import {z} from 'zod';
+import {_EffectReference} from './effect';
 
-export interface ISpecies extends ISchemaModel {
-  name: string;
-  description: IMarkdownString;
-  effects?: IReference[];
-}
+import {_MarkdownString} from './markdown-string';
+import {_Reference} from './reference';
+
+export const _Species = z.object({
+  id: z.string(),
+  name: z.string(),
+  description: _MarkdownString,
+  effects: z.array(z.intersection(_EffectReference, _Reference)),
+});
+
+export const _SpeciesReference = z.object({
+  model: z.literal('species'),
+});
+
+export type Species = z.infer<typeof _Species>;

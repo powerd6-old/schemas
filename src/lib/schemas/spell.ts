@@ -1,11 +1,20 @@
-import {ISchemaModel} from '../schema-model';
-import {IMarkdownString} from './markdown-string';
-import {IReference} from './reference';
+import {z} from 'zod';
+import {_EffectReference} from './effect';
 
-export interface ISpell extends ISchemaModel {
-  name: string;
-  description: IMarkdownString;
-  learning_requirements: IMarkdownString;
-  activation_requirements?: IMarkdownString;
-  effects: IReference[];
-}
+import {_MarkdownString} from './markdown-string';
+import {_Reference} from './reference';
+
+export const _Spell = z.object({
+  id: z.string(),
+  name: z.string(),
+  description: _MarkdownString,
+  learning_requirements: _MarkdownString,
+  activation_requirements: _MarkdownString.optional(),
+  effects: z.array(z.intersection(_EffectReference, _Reference)),
+});
+
+export const _SpellReference = z.object({
+  model: z.literal('spell'),
+});
+
+export type Spell = z.infer<typeof _Spell>;

@@ -1,7 +1,11 @@
-import {ISchemaModel} from '../schema-model';
-import {IMarkdownString} from './markdown-string';
+import {z} from 'zod';
 
-export interface IAuthor extends ISchemaModel {
-  name: string;
-  biography?: IMarkdownString;
-}
+import {_MarkdownString} from './markdown-string';
+
+export const _Author = z.object({
+  id: z.string(),
+  name: z.string(),
+  biography: _MarkdownString.optional(),
+});
+
+export type Author = z.infer<typeof _Author>;

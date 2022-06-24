@@ -1,19 +1,14 @@
-import {ISchemaModel} from '../schema-model';
-import {IAuthor} from './author';
-import {IMarkdownString} from './markdown-string';
+import {z} from 'zod';
+import {_Author} from './author';
+import {_MarkdownString} from './markdown-string';
 
-export interface IModule extends ISchemaModel {
-  name: string;
-  description: IMarkdownString;
-  authors: IAuthor[];
-  models: {
-    '^.$'?: string;
-    [k: string]: unknown;
-  };
-  content?: {
-    '^.$'?: {
-      [k: string]: unknown;
-    }[];
-    [k: string]: unknown;
-  };
-}
+export const _Module = z.object({
+  id: z.string(),
+  name: z.string(),
+  description: _MarkdownString,
+  authors: z.array(_Author),
+  models: z.map(z.string().min(1), z.string().min(1).url()),
+  content: z.map(z.string(), z.array(z.any())),
+});
+
+export type Module = z.infer<typeof _Module>;

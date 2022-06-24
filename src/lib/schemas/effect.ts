@@ -1,7 +1,14 @@
-import {ISchemaModel} from '../schema-model';
-import {IMarkdownString} from './markdown-string';
+import {z} from 'zod';
+import {_MarkdownString} from './markdown-string';
 
-export interface IEffect extends ISchemaModel {
-  name: string;
-  description: IMarkdownString;
-}
+export const _Effect = z.object({
+  id: z.string(),
+  name: z.string(),
+  description: _MarkdownString,
+});
+
+export const _EffectReference = z.object({
+  model: z.literal('effect'),
+});
+
+export type Effect = z.infer<typeof _Effect>;
