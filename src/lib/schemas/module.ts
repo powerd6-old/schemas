@@ -4,10 +4,10 @@
  * @module
  */
 import {z} from 'zod';
- import {SchemaObject} from '../schema';
- import {MarkdownString} from '../utils/markdown-string';
- import {ReferenceForType} from '../utils/reference';
- import {Author} from './author';
+import {SchemaObject} from '../schema';
+import {MarkdownString} from '../utils/markdown-string';
+import {ReferenceForType} from '../utils/reference';
+import {Author} from './author';
 
 const name = 'module';
 
