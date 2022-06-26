@@ -1,6 +1,6 @@
 {
   "name": "@powerd6/schemas",
-  "version": "1.1.1",
+  "version": "2.0.0",
   "description": "Schemas used by the powerd6 roleplaying system",
   "main": "./build/index.js",
   "scripts": {
@@ -13,7 +13,8 @@
     "fix": "gts fix",
     "prepare": "npm run compile",
     "pretest": "npm run compile",
-    "posttest": "npm run lint"
+    "posttest": "npm run lint",
+    "docs": "typedoc"
   },
   "repository": {
     "type": "git",
@@ -30,6 +31,7 @@
     "@types/node": "^14.11.2",
     "gts": "^3.1.0",
     "jest": "^28.1.1",
+    "typedoc": "^0.22.18",
     "typescript": "^4.0.3"
   },
   "dependencies": {

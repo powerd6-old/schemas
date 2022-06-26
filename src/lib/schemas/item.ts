@@ -1,18 +1,26 @@
+/**
+ * Item
+ *
+ * @module
+ */
 import {z} from 'zod';
-import {_EffectReference} from './effect';
+import {SchemaObject} from '../schema';
+import {MarkdownString} from '../utils/markdown-string';
+import {ReferenceForType} from '../utils/reference';
+import {EffectReference} from './effect';
 
-import {_MarkdownString} from './markdown-string';
-import {_Reference} from './reference';
+const name = 'item';
 
-export const _Item = z.object({
-  id: z.string(),
+export const Item = SchemaObject(name).extend({
   name: z.string(),
-  description: _MarkdownString,
-  effects: z.array(z.intersection(_EffectReference, _Reference)),
+  description: MarkdownString,
+  effects: z.array(EffectReference),
 });
 
-export const _ItemReference = z.object({
-  model: z.literal('item'),
-});
+/**
+ * A [[Reference]] to an [[Item]].
+ */
+export const ItemReference = ReferenceForType(name);
 
-export type Item = z.infer<typeof _Item>;
+// eslint-disable-next-line @typescript-eslint/no-empty-interface
+export interface Item extends z.TypeOf<typeof Item> {}

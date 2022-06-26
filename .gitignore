@@ -1,6 +1,9 @@
 # Compiled sources
 build/
 
+# Generated documentation
+docs/
+
 # Dependency directories
 node_modules/
 node_modules

@@ -1,14 +1,31 @@
+/**
+ * Effect
+ *
+ * @module
+ */
 import {z} from 'zod';
-import {_MarkdownString} from './markdown-string';
+import {SchemaObject} from '../schema';
+import {MarkdownString} from '../utils/markdown-string';
+import {Name} from '../utils/name';
+import {ReferenceForType} from '../utils/reference';
 
-export const _Effect = z.object({
-  id: z.string(),
-  name: z.string(),
-  description: _MarkdownString,
+const name = 'effect';
+
+/**
+ * Effects are similar to rules, but they have a more narrative meaning.
+ */
+export const Effect = SchemaObject(name).extend({
+  name: Name,
+  /**
+   * A description of the effect, as well as how to apply it.
+   */
+  description: MarkdownString,
 });
 
-export const _EffectReference = z.object({
-  model: z.literal('effect'),
-});
+/**
+ * A [[Reference]] to an [[Effect]].
+ */
+export const EffectReference = ReferenceForType(name);
 
-export type Effect = z.infer<typeof _Effect>;
+// eslint-disable-next-line @typescript-eslint/no-empty-interface
+export interface Effect extends z.TypeOf<typeof Effect> {}

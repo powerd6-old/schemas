@@ -7,8 +7,17 @@ Schemas used by the powerd6 roleplaying system
 [![Code Style: Google](https://img.shields.io/badge/code%20style-google-blueviolet.svg)](https://github.com/google/gts)
 [![Open Issues](https://img.shields.io/github/issues/powerd6/schemas)](https://github.com/powerd6/schemas/issues)
 
-## Organization
+## Using this project
 
-Schemas are store under the [`schemas`](schemas/) folder.
+This project is built with [zod](https://zod.dev).
 
-Documentation for each schema is available under the [`docs`](docs/) folder. Examples used in the documentation are stored in [`docs/examples`](docs/examples/).
+By creating zod schemas, and then generating interfaces from them, we can document, validate and use multiple types.
+
+
+### Organization
+
+Each custom type is created under the `src/lib/schemas` folder.
+
+Shared components and types are stored under the `src/lib/utils` folder.
+
+All types are exposed under the `src/index.ts` file.

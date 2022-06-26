@@ -1,14 +1,29 @@
+/**
+ * Rule
+ *
+ * @module
+ */
 import {z} from 'zod';
-import {_MarkdownString} from './markdown-string';
+import {SchemaObject} from '../schema';
+import {MarkdownString} from '../utils/markdown-string';
+import {Name} from '../utils/name';
+import {ReferenceForType} from '../utils/reference';
 
-export const _Rule = z.object({
-  id: z.string(),
-  name: z.string(),
-  description: _MarkdownString,
+const name = 'rule';
+
+export const Rule = SchemaObject(name).extend({
+  name: Name,
+  /**
+   * A description of the rule, with all the
+   * necessary details to use them during play.
+   */
+  description: MarkdownString,
 });
 
-export const _RuleReference = z.object({
-  model: z.literal('rule'),
-});
+/**
+ * A [[Reference]] to a [[Rule]].
+ */
+export const RuleReference = ReferenceForType(name);
 
-export type Rule = z.infer<typeof _Rule>;
+// eslint-disable-next-line @typescript-eslint/no-empty-interface
+export interface Rule extends z.TypeOf<typeof Rule> {}
