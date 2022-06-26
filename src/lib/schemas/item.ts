@@ -18,7 +18,7 @@ export const Item = SchemaObject(name).extend({
 });
 
 /**
- * A [[ Reference ]] to an [[ Item ]].
+ * A [[Reference]] to an [[Item]].
  */
 export const ItemReference = ReferenceForType(name);
 

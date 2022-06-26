@@ -19,13 +19,13 @@ export const Focus = SchemaObject(name).extend({
    */
   description: MarkdownString,
   /**
-   * A [[ Reference ]] to the [[ Attribute ]] that contains this focus.
+   * A [[Reference]] to the [[Attribute]] that contains this focus.
    */
   attribute: AttributeReference,
 });
 
 /**
- * A [[ Reference ]] to a [[ Focus ]].
+ * A [[Reference]] to a [[Focus]].
  */
 export const FocusReference = ReferenceForType(name);
 

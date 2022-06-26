@@ -28,13 +28,13 @@ export const Attribute = SchemaObject(name).extend({
   /**
    * The two focuses that relate to this attribute.
    *
-   * This is a [[ Reference ]], rather than a [[ Focus ]].
+   * This is a [[Reference]], rather than a [[Focus]].
    */
   focuses: z.array(FocusReference).length(2),
 });
 
 /**
- * A [[ Reference ]] to an [[ Attribute ]].
+ * A [[Reference]] to an [[Attribute]].
  */
 export const AttributeReference = ReferenceForType(name);
 

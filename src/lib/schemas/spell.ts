@@ -31,13 +31,13 @@ export const Spell = SchemaObject(name).extend({
   /**
    * A list of all the effects that this spell causes when activated.
    *
-   * This is a [[ Reference ]], rather than an [[ Effect ]].
+   * This is a [[Reference]], rather than an [[Effect]].
    */
   effects: z.array(EffectReference),
 });
 
 /**
- * A [[ Reference ]] to a [[ Spell ]].
+ * A [[Reference]] to a [[Spell]].
  */
 export const SpellReference = ReferenceForType(name);
 

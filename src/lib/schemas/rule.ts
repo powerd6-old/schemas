@@ -21,7 +21,7 @@ export const Rule = SchemaObject(name).extend({
 });
 
 /**
- * A [[ Reference ]] to a [[ Rule ]].
+ * A [[Reference]] to a [[Rule]].
  */
 export const RuleReference = ReferenceForType(name);
 

@@ -38,13 +38,13 @@ export const AttributeValues = z.intersection(
   AttributeReference,
   z.object({
     /**
-     * The attribute value for the specified [[ Attribute ]].
+     * The attribute value for the specified [[Attribute]].
      *
      * Must be between -3 and 5.
      */
     value: z.number().gte(-3).lte(5),
     /**
-     * A flag to indicate if the [[ Attribute ]] is a primary attribute.
+     * A flag to indicate if the [[Attribute]] is a primary attribute.
      *
      * Only one attribute should have this value as `true` on a character.
      */
@@ -98,22 +98,22 @@ export const Character = SchemaObject(name).extend({
   species: SpeciesReference,
   character_points: CharacterPoints,
   attribute_values: AttributeValues,
-  /** The list of [[ Focus | focuses ]] a character has obtained. */
+  /** The list of [[Focus | focuses]] a character has obtained. */
   acquired_focuses: z.array(FocusReference),
   injury_capacity: InjuryCapacity,
   inventory: Inventory,
   /**
-   * The list of [[ Spell | spells ]] a character knows.
+   * The list of [[Spell | spells]] a character knows.
    */
   known_spells: z.array(SpellReference),
   /**
-   * The list of [[ Effect | effects ]] that are applied to a character.
+   * The list of [[Effect | effects]] that are applied to a character.
    */
   effects: z.array(EffectReference),
 });
 
 /**
- * A [[ Reference ]] to a [[ Character ]].
+ * A [[Reference]] to a [[Character]].
  */
 export const CharacterReference = ReferenceForType(name);
 

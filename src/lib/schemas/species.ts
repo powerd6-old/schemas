@@ -26,13 +26,13 @@ export const Species = SchemaObject(name).extend({
   /**
    * A list of all the effects that this species gives to a character.
    *
-   * This is a [[ Reference ]], rather than an [[ Effect ]].
+   * This is a [[Reference]], rather than an [[Effect]].
    */
   effects: z.array(EffectReference),
 });
 
 /**
- * A [[ Reference ]] to a [[ Species ]].
+ * A [[Reference]] to a [[Species]].
  */
 export const SpeciesReference = ReferenceForType(name);
 

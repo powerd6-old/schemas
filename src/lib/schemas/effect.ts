@@ -23,7 +23,7 @@ export const Effect = SchemaObject(name).extend({
 });
 
 /**
- * A [[ Reference ]] to an [[ Effect ]].
+ * A [[Reference]] to an [[Effect]].
  */
 export const EffectReference = ReferenceForType(name);
 

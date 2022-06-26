@@ -18,7 +18,7 @@ export const Injury = SchemaObject(name).extend({
 });
 
 /**
- * A [[ Reference ]] to an [[ Injury ]].
+ * A [[Reference]] to an [[Injury]].
  */
 export const InjuryReference = ReferenceForType(name);
 

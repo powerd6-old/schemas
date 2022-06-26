@@ -22,7 +22,7 @@ export const Author = SchemaObject(name).extend({
 });
 
 /**
- * A [[ Reference ]] to an [[ Author ]].
+ * A [[Reference]] to an [[Author]].
  */
 export const AuthorReference = ReferenceForType(name);
 
