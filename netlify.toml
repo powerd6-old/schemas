@@ -1,9 +1,3 @@
 [build]
-  command = "" # Blank because docsify doesn't need to build
-
-
-[[headers]]
-  for = "/schemas/*.json"
-  [headers.values]
-    content-type = "application/schema+json"
-    Access-Control-Allow-Origin = "*"
+  command = "npm run docs"
+  publish = "docs/"
