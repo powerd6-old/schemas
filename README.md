@@ -6,9 +6,3 @@ Schemas used by the powerd6 roleplaying system
 [![Powered by Docsify](https://img.shields.io/badge/powered%20by-Docsify-brightgreen)]()
 [![Code Style: Google](https://img.shields.io/badge/code%20style-google-blueviolet.svg)](https://github.com/google/gts)
 [![Open Issues](https://img.shields.io/github/issues/powerd6/schemas)](https://github.com/powerd6/schemas/issues)
-
-## Organization
-
-Schemas are store under the [`schemas`](schemas/) folder.
-
-Documentation for each schema is available under the [`docs`](docs/) folder. Examples used in the documentation are stored in [`docs/examples`](docs/examples/).

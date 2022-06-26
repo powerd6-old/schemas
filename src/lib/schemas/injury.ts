@@ -1,23 +1,26 @@
+/**
+ * Injury
+ *
+ * @module
+ */
 import {z} from 'zod';
-import {_EffectReference} from './effect';
-import {_Identifier} from './identifier';
+import {SchemaObject} from '../schema';
+import {MarkdownString} from '../utils/markdown-string';
+import {ReferenceForType} from '../utils/reference';
+import {EffectReference} from './effect';
 
-import {_MarkdownString} from './markdown-string';
-import {_Reference} from './reference';
+const name = 'injury';
 
-export const schemaName = 'injury';
-
-export default _Injury;
-
-export const _Injury = z.object({
-  id: _Identifier,
+export const Injury = SchemaObject(name).extend({
   name: z.string(),
-  description: _MarkdownString,
-  effects: z.array(z.intersection(_EffectReference, _Reference)).optional(),
+  description: MarkdownString,
+  effects: z.array(EffectReference),
 });
 
-export const _InjuryReference = z.object({
-  model: z.literal(schemaName),
-});
+/**
+ * A [[ Reference ]] to an [[ Injury ]].
+ */
+export const InjuryReference = ReferenceForType(name);
 
-export type Injury = z.infer<typeof _Injury>;
+// eslint-disable-next-line @typescript-eslint/no-empty-interface
+export interface Injury extends z.TypeOf<typeof Injury> {}

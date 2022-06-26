@@ -1,25 +1,45 @@
+/**
+ * Spell
+ *
+ * @module
+ */
 import {z} from 'zod';
-import {_EffectReference} from './effect';
-import {_Identifier} from './identifier';
+import {SchemaObject} from '../schema';
+import {MarkdownString} from '../utils/markdown-string';
+import {Name} from '../utils/name';
+import {ReferenceForType} from '../utils/reference';
+import {EffectReference} from './effect';
 
-import {_MarkdownString} from './markdown-string';
-import {_Reference} from './reference';
+const name = 'spell';
 
-export const schemaName = 'spell';
-
-export default _Spell;
-
-export const _Spell = z.object({
-  id: _Identifier,
-  name: z.string(),
-  description: _MarkdownString,
-  learning_requirements: _MarkdownString,
-  activation_requirements: _MarkdownString.optional(),
-  effects: z.array(z.intersection(_EffectReference, _Reference)),
+export const Spell = SchemaObject(name).extend({
+  name: Name,
+  /**
+   * The description of how the spell looks and behaves.
+   */
+  description: MarkdownString,
+  /**
+   * A paragraph explaining what conditions must be achieved
+   * for this spell to be available for learning.
+   */
+  learning_requirements: MarkdownString,
+  /**
+   * A paragraph explaining what conditions must be met so
+   * this spell can be activated.
+   */
+  activation_requirements: MarkdownString.optional(),
+  /**
+   * A list of all the effects that this spell causes when activated.
+   *
+   * This is a [[ Reference ]], rather than an [[ Effect ]].
+   */
+  effects: z.array(EffectReference),
 });
 
-export const _SpellReference = z.object({
-  model: z.literal(schemaName),
-});
+/**
+ * A [[ Reference ]] to a [[ Spell ]].
+ */
+export const SpellReference = ReferenceForType(name);
 
-export type Spell = z.infer<typeof _Spell>;
+// eslint-disable-next-line @typescript-eslint/no-empty-interface
+export interface Spell extends z.TypeOf<typeof Spell> {}

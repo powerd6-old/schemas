@@ -1,23 +1,40 @@
+/**
+ * Species
+ *
+ * @module
+ */
 import {z} from 'zod';
-import {_EffectReference} from './effect';
-import {_Identifier} from './identifier';
+import {SchemaObject} from '../schema';
+import {MarkdownString} from '../utils/markdown-string';
+import {Name} from '../utils/name';
+import {ReferenceForType} from '../utils/reference';
+import {EffectReference} from './effect';
 
-import {_MarkdownString} from './markdown-string';
-import {_Reference} from './reference';
+const name = 'species';
 
-export const schemaName = 'species';
-
-export default _Species;
-
-export const _Species = z.object({
-  id: _Identifier,
-  name: z.string(),
-  description: _MarkdownString,
-  effects: z.array(z.intersection(_EffectReference, _Reference)),
+export const Species = SchemaObject(name).extend({
+  name: Name,
+  /**
+   * A generic description of what the species is, how they came to be,
+   * how they behave and any other characteristic that they possess.
+   */
+  description: MarkdownString,
+  /**
+   * A description of the appearance of a species
+   */
+  appearance: MarkdownString,
+  /**
+   * A list of all the effects that this species gives to a character.
+   *
+   * This is a [[ Reference ]], rather than an [[ Effect ]].
+   */
+  effects: z.array(EffectReference),
 });
 
-export const _SpeciesReference = z.object({
-  model: z.literal(schemaName),
-});
+/**
+ * A [[ Reference ]] to a [[ Species ]].
+ */
+export const SpeciesReference = ReferenceForType(name);
 
-export type Species = z.infer<typeof _Species>;
+// eslint-disable-next-line @typescript-eslint/no-empty-interface
+export interface Species extends z.TypeOf<typeof Species> {}

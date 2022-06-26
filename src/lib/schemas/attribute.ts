@@ -1,25 +1,42 @@
+/**
+ * Attribute
+ *
+ * @module
+ */
 import {z} from 'zod';
-import {_FocusReference} from './focus';
-import {_Identifier} from './identifier';
-import {_MarkdownString} from './markdown-string';
-import {_Reference} from './reference';
+import {FocusReference} from './focus';
+import {SchemaObject} from '../schema';
+import {MarkdownString} from '../utils/markdown-string';
+import {ReferenceForType} from '../utils/reference';
+import {Name} from '../utils/name';
 
-export const schemaName = 'attribute';
+const name = 'attribute';
 
-export default _Attribute;
-
-export const _Attribute = z.object({
-  id: _Identifier,
-  name: z.string(),
+export const Attribute = SchemaObject(name).extend({
+  name: Name,
+  /**
+   * The associated number of this attribute.
+   *
+   * Must be between 1 and 6.
+   */
   associated_number: z.number().int().gte(1).lte(6),
+  /**
+   * The three-letter abbreviation of this attribute's name.
+   */
   abbreviation: z.string().trim().length(3),
-  description: _MarkdownString,
-  focuses: z.array(z.intersection(_FocusReference, _Reference)).length(2),
+  description: MarkdownString,
+  /**
+   * The two focuses that relate to this attribute.
+   *
+   * This is a [[ Reference ]], rather than a [[ Focus ]].
+   */
+  focuses: z.array(FocusReference).length(2),
 });
 
-export const _AttributeReference = z.object({
-  model: z.literal(schemaName),
-});
+/**
+ * A [[ Reference ]] to an [[ Attribute ]].
+ */
+export const AttributeReference = ReferenceForType(name);
 
-export type Attribute = z.infer<typeof _Attribute>;
-
+// eslint-disable-next-line @typescript-eslint/no-empty-interface
+export interface Attribute extends z.TypeOf<typeof Attribute> {}

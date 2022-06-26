@@ -1,22 +1,33 @@
+/**
+ * Focus
+ *
+ * @module
+ */
 import {z} from 'zod';
-import {_AttributeReference} from './attribute';
-import {_Identifier} from './identifier';
-import {_MarkdownString} from './markdown-string';
-import {_Reference} from './reference';
+import {AttributeReference} from './attribute';
+import {SchemaObject} from '../schema';
+import {MarkdownString} from '../utils/markdown-string';
+import {ReferenceForType} from '../utils/reference';
+import {Name} from '../utils/name';
 
-export const schemaName = 'focus';
+const name = 'focus';
 
-export default _Focus;
-
-export const _Focus = z.object({
-  id: _Identifier,
-  name: z.string(),
-  description: _MarkdownString,
-  attribute: z.intersection(_AttributeReference, _Reference),
+export const Focus = SchemaObject(name).extend({
+  name: Name,
+  /**
+   * The description of how a focus specializes the related attribute.
+   */
+  description: MarkdownString,
+  /**
+   * A [[ Reference ]] to the [[ Attribute ]] that contains this focus.
+   */
+  attribute: AttributeReference,
 });
 
-export const _FocusReference = z.object({
-  model: z.literal(schemaName),
-});
+/**
+ * A [[ Reference ]] to a [[ Focus ]].
+ */
+export const FocusReference = ReferenceForType(name);
 
-export type Focus = z.infer<typeof _Focus>;
+// eslint-disable-next-line @typescript-eslint/no-empty-interface
+export interface Focus extends z.TypeOf<typeof Focus> {}
