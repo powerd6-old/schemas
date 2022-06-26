@@ -1,11 +1,16 @@
 import {z} from 'zod';
 import {_EffectReference} from './effect';
+import {_Identifier} from './identifier';
 
 import {_MarkdownString} from './markdown-string';
 import {_Reference} from './reference';
 
+export const schemaName = 'spell';
+
+export default _Spell;
+
 export const _Spell = z.object({
-  id: z.string(),
+  id: _Identifier,
   name: z.string(),
   description: _MarkdownString,
   learning_requirements: _MarkdownString,
@@ -14,7 +19,7 @@ export const _Spell = z.object({
 });
 
 export const _SpellReference = z.object({
-  model: z.literal('spell'),
+  model: z.literal(schemaName),
 });
 
 export type Spell = z.infer<typeof _Spell>;

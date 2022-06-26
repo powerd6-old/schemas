@@ -8,9 +8,14 @@ import {_FocusReference} from './focus';
 import {_InjuryReference} from './injury';
 import {_ItemReference} from './item';
 import {_Spell} from './spell';
+import {_Identifier} from './identifier';
+
+export const schemaName = 'character';
+
+export default _Character;
 
 export const _Character = z.object({
-  id: z.string(),
+  id: _Identifier,
   name: z.string(),
   character_points: z.object({
     available: z.number().gte(0),
@@ -51,7 +56,7 @@ export const _Character = z.object({
 });
 
 export const _CharacterReference = z.object({
-  model: z.literal('character'),
+  model: z.literal(schemaName),
 });
 
 export type Character = z.infer<typeof _Character>;
